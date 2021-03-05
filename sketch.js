@@ -77,13 +77,7 @@ function draw() {
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
-    camera.position.x+=6
-    if(camera.position.x>ground.width/2+300)
-    {
-      camera.position.x=300;
-      obstaclesGroup.destroyEach();
-      cloudsGroup.destroyEach();
-    }
+    
     if(keyDown("space") && trex.y >= 150) {
       trex.velocityY = -12;
     }
